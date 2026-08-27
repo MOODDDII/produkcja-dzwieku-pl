@@ -10,16 +10,11 @@ function createSlider(container, slides) {
 
   function render() {
     const slide = slides[current];
-  
     imageEl.src = slide.img;
     imageEl.alt = slide.alt || "";
-  
     if (titleEl && slide.title) titleEl.textContent = slide.title;
     if (stepEl && slide.step) stepEl.textContent = slide.step;
-  
-    const existingPs = paragraphsEl.querySelectorAll("p.slider-desk");
-    existingPs.forEach(p => p.remove());
-  
+    paragraphsEl.querySelectorAll("p.slider-desk").forEach((p) => p.remove());
     slide.texts.forEach((text) => {
       const p = document.createElement("p");
       p.className = "slider-desk";

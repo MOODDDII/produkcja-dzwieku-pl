@@ -56,7 +56,6 @@ body {
   line-height: 135%;
   letter-spacing: -1%;
   color: var(--neutral-300);
-  font-weight: 500;
   transition: var(--transition-300);
 }
 
@@ -184,20 +183,10 @@ body {
 
 .hero_logos::before {
   left: 0;
-  /* background: linear-gradient(
-      to right,
-      var(--black),
-      transparent
-  ); */
 }
 
 .hero_logos::after {
   right: 0;
-  /* background: linear-gradient(
-      to left,
-      var(--black),
-      transparent
-  ); */
 }
 
 .logos_track {
@@ -220,20 +209,13 @@ body {
   height: 32px;
   flex-shrink: 0;
   opacity: .8;
-  transition: opacity .3s ease, transform .3s ease;
-}
-
-.hero_logo:hover {
-  opacity: 1;
-  transform: scale(1.08);
-}
-
-.hero_logo {
   transition: var(--transition-300);
   cursor: pointer;
 }
 
 .hero_logo:hover {
+  opacity: 1;
+  transform: scale(1.08);
   scale: 1.1;
 }
 
@@ -277,7 +259,6 @@ body {
   filter: grayscale(100%);
   transition: 500ms;
 }
-
 
 .photos_photo:hover {
   filter: grayscale(0%);
