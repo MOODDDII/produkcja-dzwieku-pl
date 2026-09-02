@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>POST Produkcja dźwięku</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/responcive.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -20,6 +21,11 @@
           <div class="header_logo_container">
             <img class="logo" src="./images/logo-main.svg" alt="logo" />
           </div>
+          <button class="header_burger" aria-label="Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <div class="header_menu">
             <ul class="header_menu_list">
               <li><a class="header_link" href="#">Kim jestem</a></li>
@@ -430,5 +436,28 @@
 
     <script src="./js/slider.js"></script>
     <script src="./js/animations-scroll.js"></script>
+    <script>
+      (function () {
+        const burger = document.querySelector(".header_burger");
+        const menu = document.querySelector(".header_menu");
+        if (!burger || !menu) return;
+
+        burger.addEventListener("click", function () {
+          const isOpen = menu.classList.toggle("is-open");
+          burger.classList.toggle("is-active", isOpen);
+          burger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          document.body.style.overflow = isOpen ? "hidden" : "";
+        });
+
+        menu.querySelectorAll(".header_link").forEach(function (link) {
+          link.addEventListener("click", function () {
+            menu.classList.remove("is-open");
+            burger.classList.remove("is-active");
+            burger.setAttribute("aria-expanded", "false");
+            document.body.style.overflow = "";
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
