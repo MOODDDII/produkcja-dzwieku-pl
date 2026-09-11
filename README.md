@@ -2,7 +2,7 @@
 
 A landing page for a Polish sound production / audio engineering service ("produkcja dźwięku" — "sound production" in Polish). The project is a static front-end site built with HTML, CSS, and JavaScript.
 
-> **Note:** This is a **desktop demo**. The layout is designed and optimized for desktop screen sizes and has not yet been adapted for mobile or tablet viewports.
+> **Note:** This is a **demo**.
 
 ## 🔗 Live Demo
 
