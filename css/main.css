@@ -45,6 +45,10 @@ body {
   margin-inline: 120px;
 }
 
+.header_menu {
+  z-index: 0;
+}
+
 .header_menu_list {
   display: flex;
   gap: 24px;
@@ -74,6 +78,10 @@ body {
 .logo {
   width: 89px;
   height: 40px;
+}
+
+.header_logo_container {
+  z-index: 3;
 }
 
 .hero {
@@ -374,6 +382,11 @@ body {
   background-color: var(--brand-green);
 }
 
+.slider_arrows {
+  z-index: 30;
+  overflow: visible;
+}
+
 .slider_arrows_arrow {
   transition: var(--transition-300);
   cursor: pointer;
@@ -384,7 +397,7 @@ body {
 }
 
 .slider_arrows_arrow:hover {
-  scale: 1.1;
+  scale: 1.03;
 }
 
 .slider_paragraphs {

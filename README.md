@@ -35,10 +35,6 @@ cd produkcja-dzwieku-pl
 # then simply open index.html in your browser
 ```
 
-## 📌 Status
-
-Desktop-only demo — mobile responsiveness is not yet implemented.
-
 ## 📄 Repository
 
 [github.com/MOODDDII/produkcja-dzwieku-pl](https://github.com/MOODDDII/produkcja-dzwieku-pl)
